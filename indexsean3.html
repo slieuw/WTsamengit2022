@@ -1,0 +1,67 @@
+
+<script>
+    
+    let vary = 10;  // globale variabele
+    let rijtje = [5, 20, 14, 154,202,55,22];
+    function heetWelkom(){        
+        let varx = 0; // locale variabele
+        varx++;
+        vary--;
+        console.log(varx);
+        console.log(vary);
+        if(vary < 0){
+            document.getElementById("detitel").innerHTML = "je bent af";
+        }
+        console.log( rijtje[2] );
+        console.log(rijtje)
+        let vari = 0;
+        console.log(rijtje[vari]);
+        vari ++;
+        console.log(rijtje[vari]);
+        for(var x = 0 ;  x < rijtje.length   ;  x++  ){   /// loops
+            console.log("print in for loop"+x);
+            console.log(rijtje[x]);
+        }
+
+        //casten parsen
+        var getal = document.getElementById("inputfield").value;
+        
+        if(!getal ==NaN){
+            getal = parseInt(getal);
+            alert(getal+getal);
+            rijtje.push(getal);
+        }
+        
+        console.log(rijtje);
+        toonBoodschappenlijstje();
+
+    }
+
+    function toonBoodschappenlijstje(){
+        var lijstje = document.getElementById("boodschappenoverzicht");
+        for (let x in rijtje)
+        {
+            lijstje.innerHTML +="<div class=item><span>prijs:</span><br>"+(rijtje[x])+"<div>";
+        }
+    }
+
+	function buttonfunction(){
+        var var1 = document.getElementById("inputfield");
+        var var2 = document.getElementById("h1field");
+		if(var1.value == "fred")
+        {
+            var2.innerHTML = "WELKOM fred";
+        }
+        else
+        {
+            var2.innerHTML = "VERBODEN TOEGANG";
+        }
+	}
+
+</script>
+
+<input id="inputfield">
+<button onclick="buttonfunction()">MY BUTTON</button>
+<button onclick="heetWelkom()">TEACHER BUTTON</button>
+<h1 id="h1field" text="Test"></h1>
+<div id="boodschappenoverzicht"></div>

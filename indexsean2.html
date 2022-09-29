@@ -1,0 +1,55 @@
+<style>
+
+</style>
+
+<script>
+	function mijnfunctie(){ // eventlistener
+		alert("Hij doet het");
+		var x = 10;
+		console.log(x);
+		x++;
+		console.log(x);
+		console.log("====HIER MOET JE KIJKEN");
+		var element = document.getElementById("detitel");
+		console.log(element.innerHTML);
+		element.innerHTML = "Stuk nieuw tekst";
+		element.style.backgroundColor = 'red';
+
+		var y = 25;
+		if (y > 10){
+			alert("hij is groter dan 10");
+		}
+
+		var var1 = document.getElementById("tekstveldje");
+		console.log(var1.value);
+	}
+	function tweedefunctie(){
+		alert("dit is heel wat anders")
+
+		/*
+{     accolade squickly bracket curly bracket   
+"    quote
+'    single quote
+<   kleiner dan   tag openen   winkelhaak
+[    blokhaken rechte haken
+~   tilde    golfje snorretje
+:   dubbele punt    colon
+;   semicolon punt komma
+=    
+(    ronde haken  haakje    parenthesis
+|   verticale streep scheidingsteken    pipe or-teken
+^   tot de macht powerteken dakje   circonflex
+`    backtick   
+_     lage streep underscore
+/   slash forwarslash
+#    hekje hashtag
+\   backslash
+*/
+	}
+</script>
+<input id="tekstveldje">
+
+<h1 onclick="mijnfunctie()" id="detitel">KLIK ME<h1>
+
+EVENT
+<div onclick="tweedefunctie()">HOVER ME</div>
